@@ -30,23 +30,23 @@ void printItemInfo(const Item&);
 
 class Store{
 	public:
-	    Store();
-        int getTotal();
-        void printStoreInfo();
-        void addItem(Item);
-        void removeItem(long id, int quantity);//Remove certain amounts from the shop, based on id
+	        Store();
+                int getTotal() const;
+                void printStoreInfo();
+                void addItem(Item);
+                void removeItem(long id, int quantity);//Remove certain amounts from the shop, based on id
 	private:
-        std::vector <Item> _items;
+                std::vector <Item> _items;
 };
 
 class Order{
 	public:
-        Order();
-        void addItem(Item item);
-        void removeItem(long id, int quantity);//Remove certain amounts from the cart, based on id
-        double getTotalPrice();
-        void displayOder();
+                Order();
+                void addItem(Item item);
+                void removeItem(long id, int quantity);//Remove certain amounts from the cart, based on id
+                double getTotalPrice() const;
+                void displayOder();
 	private:
-        double _cost;
-        std::vector <Item> _cart;
+                double _cost;
+                std::vector <Item> _cart;
 };

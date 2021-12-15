@@ -69,7 +69,7 @@ void Store::addItem(Item item){
     _items.push_back(item);
 }
 
-int Store::getTotal(){
+int Store::getTotal() const{
     return _items.size();
 }
 
@@ -124,7 +124,7 @@ void Order::removeItem(long id, int quantity){//Remove certain amounts from the 
         }
     }
 }
-double Order::getTotalPrice(){
+double Order::getTotalPrice() const{
     return _cost;
 }
 
