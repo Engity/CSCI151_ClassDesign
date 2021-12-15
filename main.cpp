@@ -52,6 +52,8 @@ int main(){
     order.addItem(book);
     order.addItem(pencil);
     order.addItem(markers);
+    //Display current order
+    order.displayOder();
     //Testing removing items from current order
     order.removeItem(0,2);
 

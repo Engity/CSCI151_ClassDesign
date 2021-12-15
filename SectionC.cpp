@@ -74,7 +74,7 @@ int Store::getTotal() const{
 }
 
 void Store::removeItem(long id, int quantity){
-    for (Item item : _items){
+    for (Item &item : _items){
         if (item.getId() == id){
             int new_amount = item.getQuantity() - quantity;
 
@@ -108,7 +108,7 @@ void Order::addItem(Item item){
     _cost += item.getPrice();
 }
 void Order::removeItem(long id, int quantity){//Remove certain amounts from the cart, based on id
-    for (Item item : _cart){
+    for (Item &item : _cart){
         if (item.getId() == id){
             int new_amount = item.getQuantity() - quantity;
 
